@@ -1,0 +1,8 @@
+CREATE SCHEMA IF NOT EXISTS signup;
+
+CREATE TABLE IF NOT EXISTS signup.user(
+    name VARCHAR(15) NOT NULL,
+    email VARCHAR(254) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    PRIMARY KEY(email)
+);
