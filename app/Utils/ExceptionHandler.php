@@ -10,7 +10,7 @@
         {
             session_start();
             if (get_class($exception) == "PDOException") {
-                if ($exception->errorInfo()[1] == 1022) {
+                if ($exception->errorInfo[1] == 1062) {
                     $_SESSION['errors'][] = [self::ALREADY_REGISTERED, $exception->getMessage()];
                 }
             } elseif ($exception->getCode() == self::FATAL) {
