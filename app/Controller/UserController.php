@@ -17,9 +17,9 @@
                 $stmt->bindParam("p", $password);
                 $result = $stmt->execute();
             } catch (\PDOException $e) {
-                session_start();
-                $_SESSION['errors'][] = [$e->getMessage(), 0];
+                \App\Utils\ExceptionHandler::handler($e);
             } finally {
+                $con->closeConnection();
                 return $result;
             }
         }
