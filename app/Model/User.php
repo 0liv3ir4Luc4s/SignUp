@@ -1,4 +1,6 @@
 <?php
+    namespace App\Model;
+
     class User
     {
         private $name;
@@ -9,9 +11,9 @@
         {
             return $this->name;
         }
-        public function setNome($nome)
+        public function setName($name)
         {
-            $this->nome = $nome;
+            $this->name = $name;
         }
         public function getEmail()
         {
