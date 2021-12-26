@@ -37,7 +37,7 @@
         {
             return $this->pdo;
         }
-        public function cloneConnection()
+        public function closeConnection()
         {
             $this->pdo = null;
         }
