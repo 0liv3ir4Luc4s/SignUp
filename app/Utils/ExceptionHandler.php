@@ -5,6 +5,7 @@
     {
         public const FATAL = 0;
         public const ALREADY_REGISTERED = 1;
+        public const INVALID_INPUT = 2;
 
         public static function handler($exception)
         {

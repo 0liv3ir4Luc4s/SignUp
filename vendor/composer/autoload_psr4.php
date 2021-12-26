@@ -6,5 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\' => array($baseDir . '/app'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Respect\\Validation\\' => array($vendorDir . '/respect/validation/library'),
+    'Respect\\Stringifier\\' => array($vendorDir . '/respect/stringifier/src'),
+    'App\\Utils\\' => array($baseDir . '/app/Utils'),
+    'App\\Model\\' => array($baseDir . '/app/Model'),
+    'App\\Controller\\' => array($baseDir . '/app/Controller'),
 );
