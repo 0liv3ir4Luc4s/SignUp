@@ -7,7 +7,7 @@
         {
             try {
                 $result = false;
-                $con = new Connection("app/Controller/config.ini");
+                $con = new Connection("../../Controller/config.ini");
                 $stmt = $con->getPDO()->prepare("INSERT INTO user VALUES (:n, :e, :p);");
                 $name = $user->getName();
                 $email = $user->getEmail();
