@@ -30,8 +30,7 @@
                     $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                 }
             } catch (\Exception $ex) {
-                session_start();
-                $_SESSION['errors'][] = [$ex->getMessage(), 0];
+                \App\Utils\ExceptionHandler::handler($ex);
             }
         }
         public function getPDO()
