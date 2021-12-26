@@ -1,4 +1,6 @@
 <?php
+    namespace App\Controller;
+
     class Connection
     {
         private $user;
@@ -15,7 +17,7 @@
                 if (!$configs) {
                     $err = error_get_last();
                     $error = (isset($err) && isset($err['message']) && $err['message'] != '') ? $err['message'] : "Check the file, no errors were found";
-                    throw new Exception("Configuration file was not loaded. {$error}\n");
+                    throw new \Exception("Configuration file was not loaded. {$error}\n");
                 }
                 $this->user = $configs['user'];
                 $this->password = $configs['password'];
@@ -24,10 +26,10 @@
                 $this->driver = $configs['driver'];
 
                 if ($this->driver == "mysql") {
-                    $this->pdo = new PDO("{$this->driver}:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);
-                    $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    $this->pdo = new \PDO("{$this->driver}:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);
+                    $this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
                 }
-            } catch (Exception $ex) {
+            } catch (\Exception $ex) {
                 session_start();
                 $_SESSION['errors'][] = [$ex->getMessage(), 0];
             }

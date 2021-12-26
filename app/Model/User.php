@@ -1,4 +1,6 @@
 <?php
+    namespace App\Model;
+
     class User
     {
         private $name;
@@ -27,6 +29,6 @@
         }
         public function setPassword($password)
         {
-            $th07f7da30182e7563f77cd02719d5bf56cb849a04is->password = $password;
+            $this->password = $password;
         }
     }
