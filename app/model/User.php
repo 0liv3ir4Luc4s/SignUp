@@ -9,9 +9,9 @@
         {
             return $this->name;
         }
-        public function setNome($nome)
+        public function setName($name)
         {
-            $this->nome = $nome;
+            $this->name = $name;
         }
         public function getEmail()
         {
@@ -27,6 +27,6 @@
         }
         public function setPassword($password)
         {
-            $this->password = $password;
+            $th07f7da30182e7563f77cd02719d5bf56cb849a04is->password = $password;
         }
     }
