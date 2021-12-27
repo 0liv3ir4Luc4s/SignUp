@@ -1,1 +1,18 @@
-html{box-sizing:border-box}*,*::after,*::before{box-sizing:inherit}.logo{font:700 1.6875rem/1.1718518519 "Roboto, sans-serif";color:#fff}.h1{font:600 1.75rem/1.3617857143 "Open Sans, sans-serif";color:#000}/*# sourceMappingURL=main.css.map */
+/* Error: Undefined variable.
+ *   ,
+ * 3 |     font-family: $font-stack-subtitle;
+ *   |                  ^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   sass/base/_typography.scss 3:18  @use
+ *   sass/main.scss 2:1               root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 3 \2502      font-family: $font-stack-subtitle;\a   \2502                   ^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass/base/_typography.scss 3:18  @use\a   sass/main.scss 2:1               root stylesheet";
+}
