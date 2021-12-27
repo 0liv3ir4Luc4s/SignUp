@@ -1,6 +1,6 @@
 @use '../abstracts/variables' as *;
 body {
-    font-family: $font-stack-subtitle;
+    font-family: $font-stack-primary;
     line-height: 1.361875;
     color: $c-subtitle;
 }
@@ -10,5 +10,9 @@ body {
 }
 h1 {
     font: 600 1.75rem/1.3617857143 $font-stack-primary;
+    color: $c-black;
+}
+form {
+    font-family: $font-stack-secondary;
     color: $c-black;
 }
